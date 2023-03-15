@@ -1,0 +1,23 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+startSite:
+    path: /
+    controller: App\Controller\MainController::runStartSite
+
+create_post:
+    path: /post/create
+    controller: App\Controller\PostsController::createPost
+    
+get_post:
+    path: /post/{id}
+    controller: App\Controller\PostsController::getPost
+    methods: GET|HEAD
+
+delete_post:
+    path: /post/delete/{id}
+    controller: App\Controller\PostsController::deletePost
+    methods: GET|DELETE|HEAD
